@@ -1,1 +1,41 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgb(221, 221, 221);
+  border: 1px solid black;
+}
 
+.game-info {
+  margin-bottom: 10px;
+}
+
+.game-field {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  grid-template-rows: repeat(3, 30px);
+}
+
+.cell {
+  background-color: white;
+}
+.cell--win {
+  background-color: rgb(247, 199, 199);
+}
+.cell--win > .symbol {
+  color: red;
+}
+
+.symbol {
+  font-size: 20px;
+  font-weight: 600;
+}
+.symbol--x {
+  color: black;
+}
+.symbol--o {
+  color: green;
+}
