@@ -25,16 +25,13 @@
 .cell--win {
   background-color: rgb(247, 199, 199);
 }
-.cell--win > .symbol {
-  color: red;
-}
 
 .symbol {
   font-size: 20px;
   font-weight: 600;
 }
 .symbol--x {
-  color: black;
+  color: red;
 }
 .symbol--o {
   color: green;
