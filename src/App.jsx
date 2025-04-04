@@ -61,13 +61,16 @@ function App() {
   const handleResetClick = () => {
     setCells(INITIAL_STATE);
     setCurrentStep(INITIAL_SYMBOL);
+    setWinnerSequence();
   };
+
+  const isDraw = !winnerSequence && !cells.includes(null);
 
   return (
     <div className="game">
       <div className="game-info">
-        {winnerSequence ? 'Winner ' : 'Step '}{' '}
-        {renderSymbol(winnerSymbol ?? currentStep)}
+        {winnerSequence ? 'Winner ' : isDraw ? 'Draw' : 'Step'}{' '}
+        {!isDraw && renderSymbol(winnerSymbol ?? currentStep)}
       </div>
       <div className="game-field">
         {cells.map((symbol, index) => {
