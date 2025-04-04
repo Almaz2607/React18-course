@@ -3,6 +3,8 @@ import './App.css';
 
 const SYMBOL_X = 'X';
 const SYMBOL_O = 'O';
+const INITIAL_SYMBOL = SYMBOL_O;
+const INITIAL_STATE = [null, null, null, null, null, null, null, null, null];
 
 const computeWinner = (cells) => {
   const lines = [
@@ -26,18 +28,8 @@ const computeWinner = (cells) => {
 };
 
 function App() {
-  const [cells, setCells] = useState([
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ]);
-  const [currentStep, setCurrentStep] = useState(SYMBOL_O);
+  const [cells, setCells] = useState(INITIAL_STATE);
+  const [currentStep, setCurrentStep] = useState(INITIAL_SYMBOL);
   const [winnerSequence, setWinnerSequence] = useState();
 
   const getSymbolClassName = (symbol) => {
@@ -66,6 +58,11 @@ function App() {
     setWinnerSequence(winner);
   };
 
+  const handleResetClick = () => {
+    setCells(INITIAL_STATE);
+    setCurrentStep(INITIAL_SYMBOL);
+  };
+
   return (
     <div className="game">
       <div className="game-info">
@@ -86,6 +83,11 @@ function App() {
             </button>
           );
         })}
+      </div>
+      <div className="game-control">
+        <button type="button" className="reset" onClick={handleResetClick}>
+          Reset
+        </button>
       </div>
     </div>
   );

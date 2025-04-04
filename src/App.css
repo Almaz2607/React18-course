@@ -36,3 +36,11 @@
 .symbol--o {
   color: green;
 }
+
+.reset {
+  margin: 10px 0;
+  padding: 3px 10px;
+  background-color: rgb(254, 198, 95);
+  border: 1px solid orange;
+  border-radius: 7px;
+}
