@@ -70,7 +70,7 @@ function App() {
         ))}
       </div>
       <div className="game-control">
-        <button type="button" className="reset" onClick={handleResetClick}>
+        <button className="reset" onClick={handleResetClick}>
           Reset
         </button>
       </div>
