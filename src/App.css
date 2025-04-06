@@ -39,8 +39,8 @@
 
 .reset {
   margin: 10px 0;
-  padding: 3px 10px;
-  background-color: rgb(254, 198, 95);
+  padding: 4px 15px;
+  background-color: rgb(251, 227, 183);
   border: 1px solid orange;
   border-radius: 7px;
 }
